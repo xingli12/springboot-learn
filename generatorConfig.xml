@@ -8,14 +8,18 @@
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
-        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.lx.springbootlearn.utils.MyMapper"/>
-        </plugin>
+        <!--<plugin type="tk.mybatis.mapper.generator.MapperPlugin">-->
+            <!--<property name="mappers" value="com.lx.springbootlearn.utils.MyMapper"/>-->
+        <!--</plugin>-->
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.100.100:3306/test?useSSL=false"
-                        userId="root"
-                        password="root">
+                        connectionURL="jdbc:mysql://localhost:3306/diagnose?useSSL=false"
+                        userId="cdss"
+                        password="Cdss!2018">
         </jdbcConnection>
         <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
             NUMERIC 类型解析为java.math.BigDecimal -->
@@ -43,7 +47,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="users"></table>
+        <table tableName="health_guide"></table>
 		 
     </context>
 </generatorConfiguration>
