@@ -17,7 +17,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/diagnose?useSSL=false"
+                        connectionURL="jdbc:mysql://localhost:3306/recommend?useSSL=false"
                         userId="cdss"
                         password="Cdss!2018">
         </jdbcConnection>
@@ -47,7 +47,8 @@
         </javaClientGenerator>
 
 
-        <table tableName="health_guide"></table>
+        <!--<table tableName="simple_drug_dic_copy1"></table>-->
+        <table tableName="drug_info_copy1"></table>
 		 
     </context>
 </generatorConfiguration>

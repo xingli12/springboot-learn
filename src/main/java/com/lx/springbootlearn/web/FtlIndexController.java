@@ -16,7 +16,7 @@ import java.util.Map;
  * @Modified By:
  * @UpdateDate:
  */
-@Controller
+//@Controller
 public class FtlIndexController {
 
     @RequestMapping("/freemarkerIndex")

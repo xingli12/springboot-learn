@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lx.springbootlearn.dao.SimpleDrugDicCopy1Mapper" >
+  <resultMap id="BaseResultMap" type="com.lx.springbootlearn.model.SimpleDrugDicCopy1" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="disease_name" property="diseaseName" jdbcType="VARCHAR" />
+    <result column="t1" property="t1" jdbcType="VARCHAR" />
+    <result column="t2" property="t2" jdbcType="VARCHAR" />
+    <result column="t3" property="t3" jdbcType="VARCHAR" />
+    <result column="t4" property="t4" jdbcType="VARCHAR" />
+    <result column="t5" property="t5" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from simple_drug_dic_copy1
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.lx.springbootlearn.model.SimpleDrugDicCopy1" >
+    insert into simple_drug_dic_copy1 (id, disease_name, t1, 
+      t2, t3, t4, t5
+      )
+    values (#{id,jdbcType=INTEGER}, #{diseaseName,jdbcType=VARCHAR}, #{t1,jdbcType=VARCHAR}, 
+      #{t2,jdbcType=VARCHAR}, #{t3,jdbcType=VARCHAR}, #{t4,jdbcType=VARCHAR}, #{t5,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.lx.springbootlearn.model.SimpleDrugDicCopy1" >
+    update simple_drug_dic_copy1
+    set disease_name = #{diseaseName,jdbcType=VARCHAR},
+      t1 = #{t1,jdbcType=VARCHAR},
+      t2 = #{t2,jdbcType=VARCHAR},
+      t3 = #{t3,jdbcType=VARCHAR},
+      t4 = #{t4,jdbcType=VARCHAR},
+      t5 = #{t5,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, disease_name, t1, t2, t3, t4, t5
+    from simple_drug_dic_copy1
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select disease_name, t1, t2, t3, t4, t5
+    from simple_drug_dic_copy1
+  </select>
+</mapper>

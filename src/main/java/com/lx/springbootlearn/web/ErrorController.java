@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Modified By:
  * @UpdateDate:
  */
-@RestController
+//@RestController
 public class ErrorController {
 
     private static final Logger logger = LoggerFactory.getLogger(ErrorController.class);
