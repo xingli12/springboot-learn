@@ -1,5 +1,6 @@
 package com.lx.springbootlearn.model;
 
+
 import javax.persistence.*;
 
 public class Users {
@@ -51,4 +52,5 @@ public class Users {
     public void setAge(Integer age) {
         this.age = age;
     }
+
 }
